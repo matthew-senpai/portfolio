@@ -258,6 +258,74 @@ h1 { font-family: 'Space Grotesk'; font-size: clamp(2.9rem, 7vw, 5.4rem); line-h
 .p-links a { padding: 8px 16px; border-radius: 10px; font-size: .88rem; font-weight: 600; border: 1px solid var(--border); transition: background-color .25s, border-color .25s, color .25s }
 .p-links a:hover { color: #fff; background: var(--accent); border-color: var(--accent) }
 
+.arch-btn {
+  display: flex; align-items: center; justify-content: space-between; width: 100%; margin-top: 4px; padding: 12px 16px;
+  border-radius: 12px; font-size: .9rem; font-weight: 600; text-align: left;
+  border: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 8%, transparent);
+  transition: background-color .25s, color .25s, border-color .25s;
+}
+.arch-btn span { transition: translate .3s }
+.arch-btn:hover { color: #fff; background: var(--accent); border: 1px solid var(--accent) }
+.arch-btn:hover span { translate: 5px 0 }
+
+/* ---------- architecture dialogs ---------- */
+body:has(dialog[open]) { overflow: hidden }
+.arch {
+  width: min(780px, calc(100% - 32px)); max-height: min(88vh, 960px); margin: auto; padding: 0; overflow: auto; overscroll-behavior: contain;
+  color: var(--text); background: var(--bg2); border: 1px solid var(--border); border-radius: 24px;
+  box-shadow: 0 40px 120px -20px rgba(0,0,0,.6);
+  scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--accent) 60%, transparent) transparent;
+}
+.arch::backdrop { background: rgba(5,3,10,.6); backdrop-filter: blur(6px) }
+.arch[open] { animation: pop .45s cubic-bezier(.2,.8,.2,1) }
+.arch[open]::backdrop { animation: fade .3s }
+@keyframes pop { from { opacity: 0; translate: 0 30px; scale: .96 } }
+@keyframes fade { from { opacity: 0 } }
+.arch-head { position: sticky; top: 0; z-index: 2; padding: 26px 72px 24px 32px; color: #fff; background: var(--pg) }
+.arch-head p { font-size: .78rem; opacity: .85; letter-spacing: .08em }
+.arch-head h3 { margin-top: 4px; font-family: 'Space Grotesk'; font-size: clamp(1.25rem, 3vw, 1.6rem); line-height: 1.25; text-shadow: 0 2px 16px rgba(0,0,0,.25) }
+.arch-close {
+  position: absolute; top: 20px; right: 20px; width: 38px; height: 38px; border-radius: 50%; color: #fff;
+  background: rgba(0,0,0,.25); border: 1px solid rgba(255,255,255,.3); transition: transform .3s, background-color .3s;
+}
+.arch-close:hover { transform: rotate(90deg); background: rgba(0,0,0,.45) }
+.arch-body { display: grid; gap: 30px; padding: 28px 32px 32px }
+.arch h4 { margin-bottom: 14px; font-family: 'JetBrains Mono', monospace; font-size: .76rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent2) }
+.stack { display: grid; gap: 12px }
+.stack-row { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: start }
+.stack-row > span { padding-top: 6px; font-size: .82rem; color: var(--muted) }
+.flow { list-style: none; counter-reset: step }
+.flow li { position: relative; padding: 4px 12px 18px 56px; border-radius: 12px; counter-increment: step; transition: background-color .25s }
+.flow li:hover { background: var(--card) }
+.flow li::before {
+  content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 0; width: 38px; height: 38px;
+  display: grid; place-items: center; border-radius: 11px; font-family: 'JetBrains Mono', monospace; font-size: .78rem; font-weight: 600;
+  color: #fff; background: var(--pg); box-shadow: 0 6px 18px -6px rgba(0,0,0,.5); transition: transform .3s;
+}
+.flow li:hover::before { transform: scale(1.12) rotate(-6deg) }
+.flow li::after { content: ''; position: absolute; left: 18px; top: 42px; bottom: 2px; width: 2px; border-radius: 2px; background: linear-gradient(color-mix(in srgb, var(--accent) 70%, transparent), transparent) }
+.flow li:last-child { padding-bottom: 4px }
+.flow li:last-child::after { display: none }
+.flow b { display: block; font-size: 1rem }
+.flow p { margin: 2px 0 4px; font-size: .9rem; color: var(--muted) }
+.flow code { font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--cyan) }
+.arch[open] .flow li { animation: step .5s calc(var(--i, 0) * 70ms + .15s) both }
+.flow li:nth-child(2) { --i: 1 } .flow li:nth-child(3) { --i: 2 } .flow li:nth-child(4) { --i: 3 }
+.flow li:nth-child(5) { --i: 4 } .flow li:nth-child(6) { --i: 5 } .flow li:nth-child(7) { --i: 6 } .flow li:nth-child(8) { --i: 7 }
+@keyframes step { from { opacity: 0; translate: -14px 0 } }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px }
+.metrics div, .fraud div { padding: 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--border) }
+.metrics b { display: block; font-family: 'Space Grotesk'; font-size: 1.5rem; background: linear-gradient(120deg, var(--g1), var(--g3)); -webkit-background-clip: text; background-clip: text; color: transparent }
+.metrics span { font-size: .8rem; color: var(--muted) }
+.fraud { display: grid; gap: 10px }
+.fraud div { display: grid; grid-template-columns: 1fr 1.3fr; gap: 12px; align-items: center; font-size: .9rem }
+.fraud span { color: var(--muted) }
+.fraud b { color: var(--text) }
+.notes { list-style: none; display: grid; gap: 10px }
+.notes li { padding: 12px 16px; border-radius: 12px; font-size: .9rem; color: var(--muted); background: var(--card); border: 1px solid var(--border) }
+.notes b { color: var(--text) }
+.arch-foot { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px }
+
 /* ---------- journey ---------- */
 .timeline { position: relative; max-width: 880px; margin: 0 auto }
 .timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; translate: -50% 0; background: linear-gradient(var(--g1), var(--g3), transparent) }
@@ -333,6 +401,11 @@ footer { padding: 32px 16px 48px; text-align: center; font-size: .8rem; color: v
   .skill-grid { grid-template-columns: 1fr }
   .f1 { left: -6% } .f2 { right: -6% } .f3 { left: -8% }
   .code { font-size: 1.6rem }
+  .arch-head { padding: 22px 64px 20px 20px }
+  .arch-body { padding: 22px 20px 24px }
+  .stack-row, .fraud div { grid-template-columns: 1fr; gap: 6px }
+  .stack-row > span { padding-top: 0 }
+  .metrics { grid-template-columns: 1fr }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important }

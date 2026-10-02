@@ -94,7 +94,7 @@
   <div class="about-grid">
     <div class="about-text reveal">
       <p>I'm a final-year <strong>Electronics &amp; Communication Engineering</strong> student at Velammal Engineering College, Chennai, working where hardware meets software — microcontrollers like the <strong>Arduino UNO and ESP32</strong> on one side, <strong>C, Java and Python</strong> on the other.</p>
-      <p>I like finishing things. My projects go past the prototype: a face-verified attendance system with its own database, an AI platform for early autism screening, a tamper-evident pharma compliance ledger and a drone-based landslide rescue pipeline — all deployed and live.</p>
+      <p>I like finishing things. My projects go past the prototype: a face-verified attendance system with its own database, an AI platform for early autism screening, a tamper-evident pharma compliance ledger and a drone-based landslide rescue pipeline — each one built end-to-end.</p>
       <p>Open to <strong>SDE, Embedded Systems and AI/ML roles</strong>.</p>
       <div class="langs">
         <p class="mono">languages I speak — hover to say hi 👋</p>
@@ -109,7 +109,7 @@
     </div>
     <div class="stats">
       <div class="stat card reveal" data-tilt><b data-count="8.01" data-dec="2">8.01</b><span>CGPA in B.E. ECE</span></div>
-      <div class="stat card reveal" data-tilt style="--d:.1s"><b data-count="4">4</b><span>projects deployed live</span></div>
+      <div class="stat card reveal" data-tilt style="--d:.1s"><b data-count="4">4</b><span>projects built end-to-end</span></div>
       <div class="stat card reveal" data-tilt style="--d:.2s"><b data-count="2600" data-suffix="+">2600+</b><span>teams at HackHazards'26 — finished top 100</span></div>
       <div class="stat card reveal" data-tilt style="--d:.3s"><b data-count="5">5</b><span>languages spoken</span></div>
     </div>
@@ -169,11 +169,12 @@
         <p class="kicker">AI · Disaster response</p>
         <h3>Landslide survivor detection &amp; rescue coordination</h3>
         <p>Drone footage → person detection → ground-plane tracking → geolocation → deduplication → transparent priority ranking → a rescue command center. Built so a real UAV and edge computer can drop in without touching anything downstream.</p>
-        <div class="tags"><span>Python</span><span>YOLO</span><span>TypeScript</span><span>Vite</span></div>
+        <div class="tags"><span>Python</span><span>FastAPI</span><span>React</span><span>TypeScript</span><span>Leaflet</span></div>
         <div class="p-links">
           <a href="https://survivor-detector.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
           <a href="https://github.com/matthew-senpai/Survivor_Detector" target="_blank" rel="noopener">Code</a>
         </div>
+        <button class="arch-btn" data-arch="arch-landsight">Framework &amp; architecture <span>→</span></button>
       </div>
     </article>
 
@@ -188,6 +189,7 @@
           <a href="https://pharma-trace-nine.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
           <a href="https://github.com/matthew-senpai/Pharma-Trace" target="_blank" rel="noopener">Code</a>
         </div>
+        <button class="arch-btn" data-arch="arch-rccp">Framework &amp; architecture <span>→</span></button>
       </div>
     </article>
 
@@ -197,11 +199,11 @@
         <p class="kicker">AI · Healthcare</p>
         <h3>System for Early Detection &amp; Development</h3>
         <p>An AI platform for early autism risk screening — passive video analysis for younger children, gamified sessions for older ones, M-CHAT-R/F clinical criteria in the pipeline and a referral path to telehealth specialists. Built parent-first, not clinic-only.</p>
-        <div class="tags"><span>TypeScript</span><span>AI screening</span><span>M-CHAT-R/F</span></div>
+        <div class="tags"><span>React</span><span>Phaser 3</span><span>Express</span><span>FastAPI</span><span>XGBoost</span></div>
         <div class="p-links">
-          <a href="https://seed-black-eight.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
           <a href="https://github.com/matthew-senpai/SEED" target="_blank" rel="noopener">Code</a>
         </div>
+        <button class="arch-btn" data-arch="arch-seed">Framework &amp; architecture <span>→</span></button>
       </div>
     </article>
 
@@ -211,14 +213,201 @@
         <p class="kicker">Embedded · Computer vision</p>
         <h3>Smart Attendance System</h3>
         <p>RFID tagging with microcontroller integration to kill proxy attendance, extended with face verification and anomaly detection to catch spoofed check-ins. Offline-sync reconciles logs without a connection; every entry is stored with a second-precision timestamp.</p>
-        <div class="tags"><span>Python</span><span>Flask</span><span>Java</span><span>RFID</span><span>Arduino</span></div>
+        <div class="tags"><span>Python</span><span>Flask</span><span>SQLite</span><span>PostgreSQL</span><span>RFID</span></div>
         <div class="p-links">
-          <a href="https://smart-attendance-system-steel.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
           <a href="https://github.com/matthew-senpai/SMART-ATTENDANCE-SYSTEM" target="_blank" rel="noopener">Code</a>
         </div>
+        <button class="arch-btn" data-arch="arch-attend">Framework &amp; architecture <span>→</span></button>
       </div>
     </article>
   </div>
+
+  <!-- architecture panels (opened by the buttons above) -->
+  <dialog class="arch" id="arch-landsight" aria-labelledby="t-landsight" style="--pg:linear-gradient(135deg,#7c2d12,#ea580c 55%,#facc15)">
+    <header class="arch-head">
+      <p class="mono">01 · LANDSIGHT</p>
+      <h3 id="t-landsight">Landslide survivor detection &amp; rescue coordination</h3>
+      <form method="dialog"><button class="arch-close" aria-label="Close" autofocus>✕</button></form>
+    </header>
+    <div class="arch-body">
+      <section>
+        <h4>Framework</h4>
+        <div class="stack">
+          <div class="stack-row"><span>Frontend</span><div class="chips"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS 4</span><span>Leaflet</span><span>Framer Motion</span></div></div>
+          <div class="stack-row"><span>Backend</span><div class="chips"><span>Python</span><span>FastAPI</span><span>Uvicorn</span><span>NumPy</span><span>Pillow</span></div></div>
+          <div class="stack-row"><span>Vision &amp; drone</span><div class="chips"><span>YOLO (ultralytics)</span><span>OpenCV / GStreamer</span><span>pymavlink</span></div></div>
+          <div class="stack-row"><span>Data &amp; deploy</span><div class="chips"><span>SQLite</span><span>Vercel (static demo)</span></div></div>
+        </div>
+      </section>
+      <section>
+        <h4>Architecture · detection pipeline</h4>
+        <ol class="flow">
+          <li><b>Drone input</b><p>Video (RTSP/CSI camera) plus MAVLink telemetry, interpolated to a pose for every frame.</p><code>hardware/ · telemetry.py</code></li>
+          <li><b>Person detection</b><p>Swappable detector: recorded detections for replay, or YOLO live.</p><code>detection.py</code></li>
+          <li><b>Geolocation</b><p>Each detection is projected from pixels to ground coordinates.</p><code>geolocation.py</code></li>
+          <li><b>Ground-plane tracking</b><p>ByteTrack-style two-stage association, done on the ground instead of in the image.</p><code>tracking.py</code></li>
+          <li><b>Analysis &amp; deduplication</b><p>Movement, persistence and location confidence; repeat sightings merge into one survivor.</p><code>analysis.py</code></li>
+          <li><b>Transparent priority</b><p>A visible points table ranks each survivor HIGH / MEDIUM / LOW, with the reasons shown.</p><code>priority.py</code></li>
+          <li><b>Evidence &amp; storage</b><p>Annotated frame, crop and metadata per survivor, saved to SQLite.</p><code>evidence.py · store.py</code></li>
+          <li><b>Rescue command center</b><p>A FastAPI API feeds the React dashboard: live feed, Leaflet map and survivor panel.</p><code>main.py · frontend/</code></li>
+        </ol>
+      </section>
+      <section>
+        <h4>Results on the sample mission</h4>
+        <div class="metrics">
+          <div><b>12 / 12</b><span>people found</span></div>
+          <div><b>0</b><span>duplicate survivors</span></div>
+          <div><b>≈ 0.65 m</b><span>mean location error</span></div>
+        </div>
+      </section>
+      <section>
+        <h4>Key design decisions</h4>
+        <ul class="notes">
+          <li><b>Geolocate before tracking.</b> The drone moves about 1 m per frame, so image-space matching falls apart for small people. Matching on the ground keeps tracks stable.</li>
+          <li><b>One pipeline for replay and live flight.</b> A real UAV and edge computer replace only the inputs; nothing downstream changes.</li>
+          <li><b>Works without a backend.</b> The web demo replays a precomputed mission, clearly labelled, so it always runs.</li>
+        </ul>
+      </section>
+      <footer class="arch-foot">
+        <a class="btn primary" href="https://survivor-detector.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+        <a class="btn ghost" href="https://github.com/matthew-senpai/Survivor_Detector" target="_blank" rel="noopener">View code</a>
+      </footer>
+    </div>
+  </dialog>
+
+  <dialog class="arch" id="arch-rccp" aria-labelledby="t-rccp" style="--pg:linear-gradient(135deg,#064e3b,#0d9488 55%,#5eead4)">
+    <header class="arch-head">
+      <p class="mono">02 · RCCP</p>
+      <h3 id="t-rccp">Pharma Reverse Chain Compliance Platform</h3>
+      <form method="dialog"><button class="arch-close" aria-label="Close" autofocus>✕</button></form>
+    </header>
+    <div class="arch-body">
+      <section>
+        <h4>Framework</h4>
+        <div class="stack">
+          <div class="stack-row"><span>App</span><div class="chips"><span>Next.js 14 (App Router)</span><span>React 18</span><span>TypeScript (strict)</span><span>Tailwind CSS</span></div></div>
+          <div class="stack-row"><span>Data</span><div class="chips"><span>PostgreSQL (Neon)</span><span>Prisma ORM</span><span>Prisma migrations</span></div></div>
+          <div class="stack-row"><span>Auth &amp; validation</span><div class="chips"><span>JWT (jose)</span><span>bcrypt</span><span>Zod</span></div></div>
+          <div class="stack-row"><span>Testing &amp; deploy</span><div class="chips"><span>Vitest</span><span>HTTP acceptance script</span><span>Vercel</span></div></div>
+        </div>
+      </section>
+      <section>
+        <h4>Architecture · request path</h4>
+        <ol class="flow">
+          <li><b>Role dashboards &amp; public lookup</b><p>Retailer POS, distributor, manufacturer, facility and regulator views, plus an unauthenticated batch-verify page.</p><code>src/app/(app) · src/app/verify</code></li>
+          <li><b>API route handlers</b><p>Validate with Zod, authorise the role, then hand off. No business rules live here.</p><code>src/app/api</code></li>
+          <li><b>Domain core</b><p>Eight invariants as pure functions, a fixed-order point-of-sale decision, and a single module allowed to change state.</p><code>invariants.ts · pos.ts · lifecycle.ts</code></li>
+          <li><b>Append-only ledger</b><p>Every quantity movement appends a row; balances are always sums over the ledger.</p><code>ledger.ts · transfer.ts</code></li>
+          <li><b>Audit hash chain</b><p>Each mutation appends a hashed audit event, so tampering is detectable by walking the chain.</p><code>audit.ts</code></li>
+          <li><b>PostgreSQL via Prisma</b><p>Every mutation is one transaction; a failed invariant rolls the whole thing back.</p><code>prisma/schema.prisma</code></li>
+        </ol>
+      </section>
+      <section>
+        <h4>How it catches fraud</h4>
+        <div class="fraud">
+          <div><span>Reuse a destroyed batch number</span><b>Registry says DESTROYED → blocked at sale</b></div>
+          <div><span>Clone another real batch number</span><b>Units billed exceed units issued → critical alert</b></div>
+          <div><span>Invent a batch number</span><b>Not in the registry → critical alert</b></div>
+        </div>
+      </section>
+      <section>
+        <h4>Key design decisions</h4>
+        <ul class="notes">
+          <li><b>Rules live in one place.</b> Routes never re-implement checks, so the code can't drift from the tests that cover it.</li>
+          <li><b>Both sides of every handoff.</b> Each transfer writes the sender's and receiver's rows in one transaction, so stock can't appear from nowhere.</li>
+          <li><b>Tested end-to-end.</b> Invariant, lifecycle and audit-chain unit tests, plus a script that drives the live server over HTTP.</li>
+        </ul>
+      </section>
+      <footer class="arch-foot">
+        <a class="btn primary" href="https://pharma-trace-nine.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+        <a class="btn ghost" href="https://github.com/matthew-senpai/Pharma-Trace" target="_blank" rel="noopener">View code</a>
+      </footer>
+    </div>
+  </dialog>
+
+  <dialog class="arch" id="arch-seed" aria-labelledby="t-seed" style="--pg:linear-gradient(135deg,#4c1d95,#c026d3 55%,#f9a8d4)">
+    <header class="arch-head">
+      <p class="mono">03 · S.E.E.D</p>
+      <h3 id="t-seed">Early autism risk screening platform</h3>
+      <form method="dialog"><button class="arch-close" aria-label="Close" autofocus>✕</button></form>
+    </header>
+    <div class="arch-body">
+      <section>
+        <h4>Framework</h4>
+        <div class="stack">
+          <div class="stack-row"><span>Frontend</span><div class="chips"><span>React 18</span><span>TypeScript</span><span>Tailwind CSS</span><span>Phaser 3 games</span></div></div>
+          <div class="stack-row"><span>Backend</span><div class="chips"><span>Node.js</span><span>Express</span><span>Prisma</span><span>Bull queue</span><span>Socket.io</span></div></div>
+          <div class="stack-row"><span>AI engine</span><div class="chips"><span>Python</span><span>FastAPI</span><span>MediaPipe Face Mesh</span><span>XGBoost</span></div></div>
+          <div class="stack-row"><span>Data &amp; infra</span><div class="chips"><span>PostgreSQL</span><span>Redis</span><span>JWT + refresh rotation</span><span>Docker Compose</span></div></div>
+        </div>
+      </section>
+      <section>
+        <h4>Architecture · screening flow</h4>
+        <ol class="flow">
+          <li><b>Gated sign-up</b><p>Parents register with a clinician-issued invite code, the consent gate for children's health data under India's DPDP Act 2023.</p><code>auth.routes.ts · clinician.routes.ts</code></li>
+          <li><b>Child profile &amp; session</b><p>The Express API creates the child profile and opens a screening session.</p><code>children.routes.ts · screening.routes.ts</code></li>
+          <li><b>Games &amp; questionnaire</b><p>Four Phaser 3 game modules (gaze, imitate, sort, follow) stream behaviour events, alongside an M-CHAT-R/F questionnaire.</p><code>game/scenes · EventCollector.ts</code></li>
+          <li><b>Queued analysis job</b><p>A Bull job (on Redis) hands the session to the FastAPI analysis engine.</p><code>analysisService.ts</code></li>
+          <li><b>Feature extraction &amp; scoring</b><p>MediaPipe face landmarks → engineered features → XGBoost score, compared against age-group baselines.</p><code>landmark_extractor.py · scorer.py</code></li>
+          <li><b>Live results</b><p>Progress streams over Socket.io; results always show a screening-only disclaimer.</p><code>Socket.io</code></li>
+          <li><b>Clinician review</b><p>A clinician reviews every result and can override the tier.</p><code>clinician/ReviewPanel.tsx</code></li>
+        </ol>
+      </section>
+      <section>
+        <h4>Key design decisions</h4>
+        <ul class="notes">
+          <li><b>No “low risk” tier.</b> Results are MONITOR, INDETERMINATE or ELEVATED; the system never clears a child outright.</li>
+          <li><b>One outlier is enough.</b> A single metric more than 2 SD below the norm lifts the result to at least INDETERMINATE.</li>
+          <li><b>Honest about limits.</b> A screening aid, not a diagnosis; baselines are marked approximate until validated on an Indian cohort.</li>
+        </ul>
+      </section>
+      <footer class="arch-foot">
+        <a class="btn ghost" href="https://github.com/matthew-senpai/SEED" target="_blank" rel="noopener">View code</a>
+      </footer>
+    </div>
+  </dialog>
+
+  <dialog class="arch" id="arch-attend" aria-labelledby="t-attend" style="--pg:linear-gradient(135deg,#1e3a8a,#4f46e5 55%,#22d3ee)">
+    <header class="arch-head">
+      <p class="mono">04 · SMART ATTEND</p>
+      <h3 id="t-attend">Smart Attendance System</h3>
+      <form method="dialog"><button class="arch-close" aria-label="Close" autofocus>✕</button></form>
+    </header>
+    <div class="arch-body">
+      <section>
+        <h4>Framework</h4>
+        <div class="stack">
+          <div class="stack-row"><span>Backend</span><div class="chips"><span>Python</span><span>Flask 3</span><span>NumPy</span></div></div>
+          <div class="stack-row"><span>Data</span><div class="chips"><span>SQLite (offline-first)</span><span>PostgreSQL via psycopg</span></div></div>
+          <div class="stack-row"><span>Dashboard</span><div class="chips"><span>Jinja templates</span><span>JavaScript</span><span>CSS</span></div></div>
+          <div class="stack-row"><span>Hardware &amp; ops</span><div class="chips"><span>RFID kiosk (simulated)</span><span>ESP32 / Raspberry Pi ready</span><span>pytest</span><span>Vercel serverless</span></div></div>
+        </div>
+      </section>
+      <section>
+        <h4>Architecture · from tap to dashboard</h4>
+        <ol class="flow">
+          <li><b>RFID / face input</b><p>A tap arrives with a face embedding; a simulator stands in for the real kiosk.</p><code>rfid_simulator.py</code></li>
+          <li><b>Anti-proxy check</b><p>The face embedding is compared with the enrolled one (cosine similarity); mismatches are flagged.</p><code>face_verification.py</code></li>
+          <li><b>Impossible-travel detection</b><p>Flags a tag used in two rooms faster than anyone could walk between them (haversine distance + max speed).</p><code>anomaly_detector.py</code></li>
+          <li><b>Local store</b><p>Every tap writes to SQLite immediately, marked unsynced; the network never blocks a write.</p><code>database.py</code></li>
+          <li><b>Background sync</b><p>Pushes queued rows to the central store when connectivity returns.</p><code>sync_manager.py</code></li>
+          <li><b>Risk analytics</b><p>An explainable per-student risk score from attendance % and absence streaks.</p><code>analytics.py</code></li>
+          <li><b>Flask API &amp; dashboard</b><p>Live view with simulation controls for proxy, travel and offline scenarios.</p><code>app.py · templates/ · static/</code></li>
+        </ol>
+      </section>
+      <section>
+        <h4>Key design decisions</h4>
+        <ul class="notes">
+          <li><b>Two independent signals.</b> A face check stops handed-over cards; impossible-travel catches photo spoofing that fools the camera.</li>
+          <li><b>Offline-first.</b> A Wi-Fi outage during a lecture never loses attendance; rows sync later.</li>
+          <li><b>Config-driven.</b> Rooms, coordinates, classes and thresholds live in one JSON file, so another department can adopt it without code changes.</li>
+        </ul>
+      </section>
+      <footer class="arch-foot">
+        <a class="btn ghost" href="https://github.com/matthew-senpai/SMART-ATTENDANCE-SYSTEM" target="_blank" rel="noopener">View code</a>
+      </footer>
+    </div>
+  </dialog>
 </section>
 
 <!-- JOURNEY -->
@@ -391,7 +580,7 @@ const links = $$('.nav nav a');
 const navIO = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.hash === '#' + e.target.id));
 }), { rootMargin: '-45% 0px -50% 0px' });
-$$('main section').forEach(s => navIO.observe(s));
+$$('main > section').forEach(s => navIO.observe(s));
 
 // reveal on scroll + counters
 const countUp = el => {
@@ -422,6 +611,13 @@ if (!calm && matchMedia('(hover: hover)').matches) $$('[data-tilt]').forEach(el 
   });
   el.addEventListener('pointerleave', () => { el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg') });
 });
+
+// architecture panels: open from the card button, close on ✕, Esc or a click outside
+$$('[data-arch]').forEach(b => b.onclick = () => document.getElementById(b.dataset.arch).showModal());
+$$('dialog.arch').forEach(d => d.addEventListener('click', e => {
+  const r = d.getBoundingClientRect();
+  if (e.target === d && (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom)) d.close();
+}));
 
 // flip photo card
 $('#photoCard').onclick = e => e.currentTarget.classList.toggle('flipped');
