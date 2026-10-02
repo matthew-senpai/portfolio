@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Godwin Matthew E — Portfolio</title>
+<meta name="description" content="Godwin Matthew E — ECE student building embedded systems, AI tools and full-stack platforms end-to-end.">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="#home" class="logo">GM<span>.</span></a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#journey">Journey</a>
+    <a href="#awards">Awards</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="icon-btn theme" id="theme" aria-label="Toggle light / dark theme">
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+  <button class="icon-btn burger" id="burger" aria-label="Open menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="eyebrow mono">// hello, world — I'm</p>
+    <h1>Godwin <span class="grad">Matthew</span></h1>
+    <p class="role mono">&gt; <span id="typed">Electronics &amp; Communication Engineer</span><span class="caret">▌</span></p>
+    <p class="lead">Final-year ECE student who builds things end-to-end — from ESP32 firmware and RFID hardware to AI pipelines and full-stack web platforms that actually ship.</p>
+    <div class="cta">
+      <a href="#projects" class="btn primary">See my work →</a>
+      <a href="Godwin_Matthew_E_Resume.pdf" class="btn ghost" download>Download résumé ↓</a>
+    </div>
+    <div class="socials">
+      <a class="icon-btn" href="https://github.com/matthew-senpai" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a class="icon-btn" href="https://linkedin.com/in/godwin-matthew-e-b55163298" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a class="icon-btn" href="mailto:matthewgodwin2005@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <div class="photo-wrap">
+      <div class="ring" aria-hidden="true"></div>
+      <button class="photo-card" id="photoCard" data-tilt aria-label="Flip card for quick facts">
+        <div class="face front">
+          <img src="photo.jpg" alt="Portrait of Godwin Matthew E">
+          <span class="badge"><i class="dot"></i>Open to roles · 2027</span>
+        </div>
+        <div class="face back">
+          <p class="mono kicker">quick_facts.json</p>
+          <ul>
+            <li><b>📍</b> Chennai, India</li>
+            <li><b>🎓</b> B.E. ECE · Velammal Engg. College</li>
+            <li><b>⚡</b> Arduino · ESP32 · RFID</li>
+            <li><b>☕</b> Strongest subject: Java</li>
+            <li><b>🗾</b> Learning 日本語</li>
+          </ul>
+        </div>
+      </button>
+      <span class="float f1 mono">ESP32</span>
+      <span class="float f2 mono">Java ☕</span>
+      <span class="float f3 mono">Next.js</span>
+      <span class="float f4 mono">Python</span>
+    </div>
+    <p class="hint mono">click the card to flip ↻</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2 class="title"><span class="mono">01.</span> About me</h2>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>I'm a final-year <strong>Electronics &amp; Communication Engineering</strong> student at Velammal Engineering College, Chennai, working where hardware meets software — microcontrollers like the <strong>Arduino UNO and ESP32</strong> on one side, <strong>C, Java and Python</strong> on the other.</p>
+      <p>I like finishing things. My projects go past the prototype: a face-verified attendance system with its own database, an AI platform for early autism screening, a tamper-evident pharma compliance ledger and a drone-based landslide rescue pipeline — all deployed and live.</p>
+      <p>Open to <strong>SDE, Embedded Systems and AI/ML roles</strong>.</p>
+      <div class="langs">
+        <p class="mono">languages I speak — hover to say hi 👋</p>
+        <div class="lang-row">
+          <span class="lang" tabindex="0" data-hi="Hello!"><span>English</span></span>
+          <span class="lang" tabindex="0" data-hi="வணக்கம்!"><span>Tamil</span></span>
+          <span class="lang" tabindex="0" data-hi="നമസ്കാരം!"><span>Malayalam</span></span>
+          <span class="lang" tabindex="0" data-hi="नमस्ते!"><span>Hindi</span></span>
+          <span class="lang" tabindex="0" data-hi="こんにちは!"><span>Japanese</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat card reveal" data-tilt><b data-count="8.01" data-dec="2">8.01</b><span>CGPA in B.E. ECE</span></div>
+      <div class="stat card reveal" data-tilt style="--d:.1s"><b data-count="4">4</b><span>projects deployed live</span></div>
+      <div class="stat card reveal" data-tilt style="--d:.2s"><b data-count="2600" data-suffix="+">2600+</b><span>teams at HackHazards'26 — finished top 100</span></div>
+      <div class="stat card reveal" data-tilt style="--d:.3s"><b data-count="5">5</b><span>languages spoken</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2 class="title"><span class="mono">02.</span> Toolbox</h2>
+  <div class="skill-grid">
+    <div class="skill-card card reveal" data-tilt>
+      <span class="ico mono">&lt;/&gt;</span>
+      <h3>Programming</h3>
+      <div class="chips"><span>C</span><span>Java</span><span>Python</span><span>TypeScript</span><span>HTML &amp; CSS</span><span>SQL</span></div>
+    </div>
+    <div class="skill-card card reveal" data-tilt style="--d:.1s">
+      <span class="ico mono">MCU</span>
+      <h3>Embedded &amp; IoT</h3>
+      <div class="chips"><span>Arduino UNO</span><span>ESP32</span><span>RFID</span><span>Microcontroller integration</span><span>Real-time IoT</span></div>
+    </div>
+    <div class="skill-card card reveal" data-tilt style="--d:.2s">
+      <span class="ico mono">WEB</span>
+      <h3>Full-Stack</h3>
+      <div class="chips"><span>Next.js</span><span>Flask</span><span>PostgreSQL</span><span>Prisma</span><span>Vercel</span><span>Testing</span></div>
+    </div>
+    <div class="skill-card card reveal" data-tilt>
+      <span class="ico mono">AI</span>
+      <h3>AI / Computer Vision</h3>
+      <div class="chips"><span>Face verification</span><span>Anomaly detection</span><span>YOLO detection</span><span>Video analysis</span></div>
+    </div>
+    <div class="skill-card card reveal" data-tilt style="--d:.1s">
+      <span class="ico mono">DSA</span>
+      <h3>Core Strengths</h3>
+      <div class="chips"><span>Java</span><span>DSA basics</span><span>System design for audits</span><span>End-to-end delivery</span></div>
+    </div>
+    <div class="skill-card card reveal" data-tilt style="--d:.2s">
+      <span class="ico mono">++</span>
+      <h3>Soft Skills</h3>
+      <div class="chips"><span>Adaptability</span><span>Quick learner</span><span>Time management</span><span>Attention to detail</span><span>Communication</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2 class="title"><span class="mono">03.</span> Things I've built</h2>
+  <div class="filters" role="radiogroup" aria-label="Filter projects">
+    <input type="radio" name="f" id="f-all" checked><label for="f-all">All</label>
+    <input type="radio" name="f" id="f-ai"><label for="f-ai">AI / ML</label>
+    <input type="radio" name="f" id="f-web"><label for="f-web">Full-Stack</label>
+    <input type="radio" name="f" id="f-hw"><label for="f-hw">Embedded</label>
+  </div>
+  <div class="project-grid">
+    <article class="project card reveal" data-tilt data-cat="ai web" style="--pg:linear-gradient(135deg,#7c2d12,#ea580c 55%,#facc15)">
+      <div class="p-top"><span class="num mono">01</span><span class="code">LANDSIGHT</span></div>
+      <div class="p-body">
+        <p class="kicker">AI · Disaster response</p>
+        <h3>Landslide survivor detection &amp; rescue coordination</h3>
+        <p>Drone footage → person detection → ground-plane tracking → geolocation → deduplication → transparent priority ranking → a rescue command center. Built so a real UAV and edge computer can drop in without touching anything downstream.</p>
+        <div class="tags"><span>Python</span><span>YOLO</span><span>TypeScript</span><span>Vite</span></div>
+        <div class="p-links">
+          <a href="https://survivor-detector.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+          <a href="https://github.com/matthew-senpai/Survivor_Detector" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project card reveal" data-tilt data-cat="web" style="--d:.1s;--pg:linear-gradient(135deg,#064e3b,#0d9488 55%,#5eead4)">
+      <div class="p-top"><span class="num mono">02</span><span class="code">RCCP</span></div>
+      <div class="p-body">
+        <p class="kicker">Full-Stack · Hackathon</p>
+        <h3>Pharma Reverse Chain Compliance Platform</h3>
+        <p>Tracks expired medicines from retail shelf to verified destruction across retailer, distributor, manufacturer and biomedical-waste roles. An append-only ledger enforces batch-level quantity conservation, blocking cloned or invented batch numbers, with a tamper-evident audit hash chain.</p>
+        <div class="tags"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span></div>
+        <div class="p-links">
+          <a href="https://pharma-trace-nine.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+          <a href="https://github.com/matthew-senpai/Pharma-Trace" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project card reveal" data-tilt data-cat="ai web" style="--pg:linear-gradient(135deg,#4c1d95,#c026d3 55%,#f9a8d4)">
+      <div class="p-top"><span class="num mono">03</span><span class="code">S.E.E.D</span></div>
+      <div class="p-body">
+        <p class="kicker">AI · Healthcare</p>
+        <h3>System for Early Detection &amp; Development</h3>
+        <p>An AI platform for early autism risk screening — passive video analysis for younger children, gamified sessions for older ones, M-CHAT-R/F clinical criteria in the pipeline and a referral path to telehealth specialists. Built parent-first, not clinic-only.</p>
+        <div class="tags"><span>TypeScript</span><span>AI screening</span><span>M-CHAT-R/F</span></div>
+        <div class="p-links">
+          <a href="https://seed-black-eight.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+          <a href="https://github.com/matthew-senpai/SEED" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project card reveal" data-tilt data-cat="ai hw" style="--d:.1s;--pg:linear-gradient(135deg,#1e3a8a,#4f46e5 55%,#22d3ee)">
+      <div class="p-top"><span class="num mono">04</span><span class="code">SMART ATTEND</span></div>
+      <div class="p-body">
+        <p class="kicker">Embedded · Computer vision</p>
+        <h3>Smart Attendance System</h3>
+        <p>RFID tagging with microcontroller integration to kill proxy attendance, extended with face verification and anomaly detection to catch spoofed check-ins. Offline-sync reconciles logs without a connection; every entry is stored with a second-precision timestamp.</p>
+        <div class="tags"><span>Python</span><span>Flask</span><span>Java</span><span>RFID</span><span>Arduino</span></div>
+        <div class="p-links">
+          <a href="https://smart-attendance-system-steel.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+          <a href="https://github.com/matthew-senpai/SMART-ATTENDANCE-SYSTEM" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="section">
+  <h2 class="title"><span class="mono">04.</span> Journey</h2>
+  <div class="timeline">
+    <div class="t-item reveal">
+      <div class="t-card card" data-tilt>
+        <span class="t-date mono">2023 — Present · Education</span>
+        <h3>B.E. Electronics &amp; Communication Engineering</h3>
+        <p class="where">Velammal Engineering College, Chennai</p>
+        <span class="pill">CGPA 8.01</span>
+      </div>
+    </div>
+    <div class="t-item reveal">
+      <div class="t-card card" data-tilt>
+        <span class="t-date mono">1 week · Internship</span>
+        <h3>Embedded Systems Intern</h3>
+        <p class="where">Globesci Technologies Pvt. Ltd.</p>
+        <span class="pill">Real-time IoT implementations</span>
+      </div>
+    </div>
+    <div class="t-item reveal">
+      <div class="t-card card" data-tilt>
+        <span class="t-date mono">19 days · Internship</span>
+        <h3>Intern — North Chennai TPS, Stage 2</h3>
+        <p class="where">Tamil Nadu Power Generation Corp. Ltd.</p>
+        <span class="pill">Live power-generation process across departments</span>
+      </div>
+    </div>
+    <div class="t-item reveal">
+      <div class="t-card card" data-tilt>
+        <span class="t-date mono">2023 · Education</span>
+        <h3>Higher Secondary Certificate (HSC)</h3>
+        <p class="where">Bethany Navajeevan CBSE School — First Class</p>
+        <span class="pill">81.17%</span>
+      </div>
+    </div>
+    <div class="t-item reveal">
+      <div class="t-card card" data-tilt>
+        <span class="t-date mono">2021 · Education</span>
+        <h3>Secondary School Leaving Certificate (SSLC)</h3>
+        <p class="where">Bethany Navajeevan CBSE School — First Class</p>
+        <span class="pill">91.50%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards" class="section">
+  <h2 class="title"><span class="mono">05.</span> Wins &amp; stages</h2>
+  <div class="awards">
+    <div class="award card reveal" data-tilt>
+      <span class="medal">🏆</span>
+      <p class="rank">1st Runner-Up</p>
+      <h3>EXPRO'26 · Paper Presentation</h3>
+      <p>Madras Institute of Technology (MIT)</p>
+    </div>
+    <div class="award card reveal" data-tilt style="--d:.1s">
+      <span class="medal">🥈</span>
+      <p class="rank">2nd Prize</p>
+      <h3>National Level Project Competition 2K25</h3>
+      <p>Velammal Institute of Technology</p>
+    </div>
+    <div class="award card reveal" data-tilt style="--d:.2s">
+      <span class="medal">🌍</span>
+      <p class="rank">Top 50–100 / 2600+</p>
+      <h3>HACKHAZARDS'26 · International</h3>
+      <p>NAMESPACE</p>
+    </div>
+  </div>
+  <div class="marquee reveal" aria-label="Other events">
+    <div class="marquee-track">
+      <span>⚡ MEGATHON'26 · 24-hr hackathon · Saveetha Engg. College</span>
+      <span>🎤 INSTERA 2K25 · Project presentation · Sri Sairam Engg. College</span>
+      <span>🧪 RACES'26 · Inter-college mini project · Velammal Engg. College</span>
+      <span>📡 IETE Student Forum Certificate</span>
+      <span>📑 INDCON'26 · Anna University</span>
+      <span aria-hidden="true">⚡ MEGATHON'26 · 24-hr hackathon · Saveetha Engg. College</span>
+      <span aria-hidden="true">🎤 INSTERA 2K25 · Project presentation · Sri Sairam Engg. College</span>
+      <span aria-hidden="true">🧪 RACES'26 · Inter-college mini project · Velammal Engg. College</span>
+      <span aria-hidden="true">📡 IETE Student Forum Certificate</span>
+      <span aria-hidden="true">📑 INDCON'26 · Anna University</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+  <div class="contact-box card reveal" data-tilt>
+    <p class="mono kicker">06. what's next?</p>
+    <h2>Let's build something <span class="grad">real</span>.</h2>
+    <p>Hiring for SDE, embedded or AI/ML roles — or have a hackathon idea? My inbox is open.</p>
+    <div class="email-row">
+      <a class="btn primary" href="mailto:matthewgodwin2005@gmail.com">Say hello ✉</a>
+      <button class="btn ghost mono" id="copy">matthewgodwin2005@gmail.com ⧉</button>
+    </div>
+    <div class="socials center">
+      <a class="icon-btn" href="https://github.com/matthew-senpai" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a class="icon-btn" href="https://linkedin.com/in/godwin-matthew-e-b55163298" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a class="icon-btn" href="Godwin_Matthew_E_Resume.pdf" download aria-label="Download résumé">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p class="mono">Designed &amp; built by Godwin Matthew E · Chennai · 2026</p>
+</footer>
+
+<a href="#home" class="icon-btn to-top" id="toTop" aria-label="Back to top">↑</a>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const root = document.documentElement;
+const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// theme toggle
+$('#theme').onclick = () => {
+  const t = root.dataset.theme === 'light' ? 'dark' : 'light';
+  root.dataset.theme = t;
+  try { localStorage.setItem('theme', t) } catch (e) {}
+};
+
+// mobile menu
+$('#burger').onclick = () => $('#nav').classList.toggle('open');
+$$('.nav nav a').forEach(a => a.onclick = () => $('#nav').classList.remove('open'));
+
+// typing roles
+const roles = ['Electronics & Communication Engineer', 'Embedded Systems Builder', 'Full-Stack Developer', 'AI / Computer Vision Tinkerer', 'Hackathon Regular'];
+if (!calm) {
+  let r = 0, i = roles[0].length, del = true;
+  const el = $('#typed');
+  setTimeout(function tick() {
+    const w = roles[r];
+    el.textContent = w.slice(0, i += del ? -1 : 1);
+    let d = del ? 35 : 75;
+    if (!del && i === w.length) { del = true; d = 1800 }
+    else if (del && i === 0) { del = false; r = (r + 1) % roles.length; d = 350 }
+    setTimeout(tick, d);
+  }, 2200);
+}
+
+// cursor spotlight
+addEventListener('pointermove', e => {
+  root.style.setProperty('--mx', e.clientX + 'px');
+  root.style.setProperty('--my', e.clientY + 'px');
+}, { passive: true });
+
+// scroll progress, sticky nav, back-to-top
+const onScroll = () => {
+  const max = root.scrollHeight - root.clientHeight;
+  $('#progress').style.transform = `scaleX(${max ? scrollY / max : 0})`;
+  $('#nav').classList.toggle('scrolled', scrollY > 30);
+  $('#toTop').classList.toggle('show', scrollY > 700);
+};
+addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// active nav link
+const links = $$('.nav nav a');
+const navIO = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.hash === '#' + e.target.id));
+}), { rootMargin: '-45% 0px -50% 0px' });
+$$('main section').forEach(s => navIO.observe(s));
+
+// reveal on scroll + counters
+const countUp = el => {
+  const end = +el.dataset.count, dec = +(el.dataset.dec || 0), suf = el.dataset.suffix || '', t0 = performance.now();
+  requestAnimationFrame(function f(t) {
+    const p = Math.min((t - t0) / 1400, 1);
+    el.textContent = (end * (1 - (1 - p) ** 3)).toFixed(dec) + suf;
+    if (p < 1) requestAnimationFrame(f);
+  });
+};
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in');
+  if (e.target.dataset.count && !calm) countUp(e.target);
+  io.unobserve(e.target);
+}), { threshold: .15 });
+$$('.reveal, [data-count]').forEach(el => io.observe(el));
+
+// 3D tilt + glare
+if (!calm && matchMedia('(hover: hover)').matches) $$('[data-tilt]').forEach(el => {
+  const max = el.id === 'photoCard' ? 14 : 7;
+  el.addEventListener('pointermove', e => {
+    const b = el.getBoundingClientRect(), x = (e.clientX - b.left) / b.width, y = (e.clientY - b.top) / b.height;
+    el.style.setProperty('--rx', (0.5 - y) * max + 'deg');
+    el.style.setProperty('--ry', (x - 0.5) * max + 'deg');
+    el.style.setProperty('--gx', x * 100 + '%');
+    el.style.setProperty('--gy', y * 100 + '%');
+  });
+  el.addEventListener('pointerleave', () => { el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg') });
+});
+
+// flip photo card
+$('#photoCard').onclick = e => e.currentTarget.classList.toggle('flipped');
+
+// copy email
+const toast = msg => { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 1800) };
+$('#copy').onclick = async () => {
+  try { await navigator.clipboard.writeText('matthewgodwin2005@gmail.com'); toast('Email copied ✓') }
+  catch (e) { location.href = 'mailto:matthewgodwin2005@gmail.com' }
+};
+</script>
+</body>
+</html>
